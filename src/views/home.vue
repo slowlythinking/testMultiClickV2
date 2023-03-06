@@ -192,8 +192,10 @@ var gplotData2 = {
 function drawing2() {
   gplot2 = new G6.Graph({
     container: "posid3", // String | HTMLElement，必须，容器 id 或容器本身
-    width: 800, // 设置画布宽度。 Number，必须
-    height: 500, /// 设置画布高度。Number，必须
+    // width: 800, // 设置画布宽度。 Number，必须
+    // height: 500, /// 设置画布高度。Number，必须
+  width: 1200,
+  height: 750,
     // 交互模式 https://g6.antv.vision/zh/docs/manual/middle/states/mode
     modes: {
       // 内置 Behavior https://g6.antv.vision/zh/docs/manual/middle/states/defaultBehavior#%E5%86%85%E7%BD%AE-behavior
@@ -225,49 +227,12 @@ function drawing2() {
   gplot2.read(gplotData2)
 
   // this.gplot2.on('元素:事件名', event => {})
-
-  // 点击画布事件
-  gplot2.on('canvas:click', event => {
-    // console.log(event)
-
-    // 点击画布时，取消所有节点样式
-    const nodes = gplot2.findAllByState('node', 'click')
-    nodes.forEach(node => {
-      gplot2.setItemState(node, 'click', false)
-    })
-  })
-
-  // 点击节点事件
-  gplot2.on('node:click', event => {
-    // console.log(event)
-
-    // 先取消其他节点样式
-    const nodes = gplot2.findAllByState('node', 'click')
-    nodes.forEach(node => {
-      gplot2.setItemState(node, 'click', false)
-    })
-
-    // 设置当前被点击节点的样式
-    gplot2.setItemState(event.item, 'click', true)
-  })
-
-  // 鼠标经过节点事件
-  gplot2.on('node:mouseenter', event => {
-    // console.log(event)
-    gplot2.setItemState(event.item, 'hover', true)
-  })
-
-  // 鼠标移除节点事件
-  gplot2.on('node:mouseleave', event => {
-    // console.log(event)
-    gplot2.setItemState(event.item, 'hover', false)
-  })
 };
 function drawing1() {
   gplot1 = new G6.Graph({
     container: "posid2", // String | HTMLElement，必须，容器 id 或容器本身
-    width: 800, // 设置画布宽度。 Number，必须
-    height: 500, /// 设置画布高度。Number，必须
+  width: 1200,
+  height: 750,
     // 交互模式 https://g6.antv.vision/zh/docs/manual/middle/states/mode
     modes: {
       // 内置 Behavior https://g6.antv.vision/zh/docs/manual/middle/states/defaultBehavior#%E5%86%85%E7%BD%AE-behavior
@@ -299,50 +264,13 @@ function drawing1() {
   gplot1.read(gplotData1)
 
   // this.gplot1.on('元素:事件名', event => {})
-
-  // 点击画布事件
-  gplot1.on('canvas:click', event => {
-    // console.log(event)
-
-    // 点击画布时，取消所有节点样式
-    const nodes = gplot1.findAllByState('node', 'click')
-    nodes.forEach(node => {
-      gplot1.setItemState(node, 'click', false)
-    })
-  })
-
-  // 点击节点事件
-  gplot1.on('node:click', event => {
-    // console.log(event)
-
-    // 先取消其他节点样式
-    const nodes = gplot1.findAllByState('node', 'click')
-    nodes.forEach(node => {
-      gplot1.setItemState(node, 'click', false)
-    })
-
-    // 设置当前被点击节点的样式
-    gplot1.setItemState(event.item, 'click', true)
-  })
-
-  // 鼠标经过节点事件
-  gplot1.on('node:mouseenter', event => {
-    // console.log(event)
-    gplot1.setItemState(event.item, 'hover', true)
-  })
-
-  // 鼠标移除节点事件
-  gplot1.on('node:mouseleave', event => {
-    // console.log(event)
-    gplot1.setItemState(event.item, 'hover', false)
-  })
 };
 
 function drawing() {
   gplot = new G6.Graph({
     container: "posid1", // String | HTMLElement，必须，容器 id 或容器本身
-    width: 800, // 设置画布宽度。 Number，必须
-    height: 500, /// 设置画布高度。Number，必须
+  width: 1200,
+  height: 750,
     // 交互模式 https://g6.antv.vision/zh/docs/manual/middle/states/mode
     modes: {
       // 内置 Behavior https://g6.antv.vision/zh/docs/manual/middle/states/defaultBehavior#%E5%86%85%E7%BD%AE-behavior
@@ -374,43 +302,6 @@ function drawing() {
   gplot.read(gplotData)
 
   // this.gplot.on('元素:事件名', event => {})
-
-  // 点击画布事件
-  gplot.on('canvas:click', event => {
-    // console.log(event)
-
-    // 点击画布时，取消所有节点样式
-    const nodes = gplot.findAllByState('node', 'click')
-    nodes.forEach(node => {
-      gplot.setItemState(node, 'click', false)
-    })
-  })
-
-  // 点击节点事件
-  gplot.on('node:click', event => {
-    // console.log(event)
-
-    // 先取消其他节点样式
-    const nodes = gplot.findAllByState('node', 'click')
-    nodes.forEach(node => {
-      gplot.setItemState(node, 'click', false)
-    })
-
-    // 设置当前被点击节点的样式
-    gplot.setItemState(event.item, 'click', true)
-  })
-
-  // 鼠标经过节点事件
-  gplot.on('node:mouseenter', event => {
-    // console.log(event)
-    gplot.setItemState(event.item, 'hover', true)
-  })
-
-  // 鼠标移除节点事件
-  gplot.on('node:mouseleave', event => {
-    // console.log(event)
-    gplot.setItemState(event.item, 'hover', false)
-  })
 };
 
 Object.prototype.toDirString = function () {
